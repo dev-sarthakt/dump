@@ -1,3 +1,0 @@
-The system enables pilots or ground crew to input the expected states of critical aircraft systems using a simple binary format where ‘1’ denotes that a system or component is active or "ON", and ‘0’ indicates it is inactive or "OFF". 
-Once the inputs are submitted, the program compares them against the actual real-time operational status of the corresponding aircraft systems. 
-If discrepancies are detected such as a pilot indicating that the cabin pressurization system should be ON (input ‘1’) while the system is in fact OFF, the program will generate an immediate warning. 
