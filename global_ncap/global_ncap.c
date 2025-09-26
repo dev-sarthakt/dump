@@ -8,7 +8,7 @@ int main() {
 
 	while(true) {
 	    printf("\n\n\n\n");
-		printf("\n\n!!! Global NCAP !!!");
+		printf("\n\nHow safe is your car ?");
 
 		printf("\n\nEnter your car brand : ");
 		scanf("%s", car);
