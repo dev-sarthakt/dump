@@ -7,7 +7,7 @@ int main() {
 	char car[10];
 
 	while(true) {
-	    printf("\n\n\n\n");
+	    printf("\n\n");
 		printf("\n\nHow safe is your car ?");
 
 		printf("\n\nEnter your car brand : ");
