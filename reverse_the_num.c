@@ -1,9 +1,10 @@
 #include <stdio.h>
-#define true 1
+#define TRUE 1
 
 int main(){
-    int num, temp = 0;
-    while(true) {
+    int num, temp;
+    while(TRUE) {
+        temp = 0;
         printf("\nNum : ");
         scanf("%d", &num);
         while(num != 0){
