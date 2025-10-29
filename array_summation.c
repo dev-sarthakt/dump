@@ -16,6 +16,6 @@ int main(){
     for (int i = 0; i < size; i++){
         scanf("%d", &array[i]);
     }
-    printf("Sum : %d", array_summation(size, array));
+    printf("Sum : %d\n", array_summation(size, array));
     return 0;
 }
