@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <math.h>
-#define true 1
+#define TRUE 1
 
 int main(){
-    while (true)
+    while (TRUE)
     {
         int num;
         printf("Enter your no. to check : ");
@@ -21,10 +21,10 @@ int main(){
         }
         if (sum == num)
         {
-            printf("It's an armstrong number.");
+            printf("It's an armstrong number.\n");
         }
         else{
-            printf("It's not an armstrong number.");
+            printf("It's not an armstrong number.\n");
         }
         break;
     }
