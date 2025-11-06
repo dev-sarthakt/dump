@@ -5,13 +5,32 @@
 #define TRUE 1
 
 struct product{
-    char *name;
+    char name[20];
     int exp;
     double qty, price, total;
 };
 
-void calc_total(int i, int size, struct product *array[size]){
+void calc_total(int i, int size, struct product *array[SIZE]){
     array[i]->total = array[i]->price*array[i]->qty;
+}
+
+void bubble(int entry, struct product *products[]){
+    for (int i = 0; i < entry; i++)
+    {
+        for (int j = i+1; j < entry; j++)
+        {
+            if (products[i]->exp <= products[j]->exp)
+            {
+                struct product temp;
+                temp = *products[i];
+                *products[i] = *products[j];
+                *products[j] = temp;
+            }
+            
+        }
+        
+    }
+    
 }
 
 int main(){
@@ -24,25 +43,26 @@ int main(){
         scanf("%c", &add);
         if (add == 'Y' || add == 'y')
         {
-            if (i > 9)
+            if (i >= SIZE)
             {
                 return 1;
             }
             printf("Enter product name : ");
-            scanf("%s", &(products[i]->name));
+            scanf("%s", products[i]->name);
             printf("Enter QTY in (kg) : ");
             scanf("%lf", &(products[i]->qty));
             printf("Enter price per kg : ");
             scanf("%lf", &(products[i]->price));
             calc_total(i, SIZE, products);
             printf("Enter expiry in days : ");
-            scanf("%s", &(products[i]->exp));
+            scanf("%d", &(products[i]->exp));
             i++;
         }
         else{
-            for (int g = 0; g < i; i++)
+            bubble(i, products);
+            for (int g = 0; g < i; g++)
             {
-                printf("%d. %s %lf %d")
+                printf("\n%d. %s %lf %d\n", g+1, products[g]->name, products[g]->total, products[g]->exp);
             }
             
         }
