@@ -22,7 +22,7 @@ int main(){
     printf("Enter no to test factorial with recursive function : ");
     scanf("%d", &num);
     printf("%0.3lf\n", fac_rec(num));
-    printf("Enter no to test factorial with itterative function : ");
+    printf("Enter no to test factorial with iterative function : ");
     scanf("%d", &num);
     printf("%0.3lf", fac_itt(&num));
     return 0;
