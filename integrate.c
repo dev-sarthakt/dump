@@ -27,6 +27,17 @@ double integrate(double a, double b, double c, double x1, double x2){
 }
 
 int main(){
-    printf("%lf\n", integrate(1, 0, 0, 0, 20));
+    double para[5];
+    printf("\nEnter the coefficient of x^2 : ");
+    scanf("%lf", &para[0]);
+    printf("Enter the coefficient of x : ");
+    scanf("%lf", &para[1]);
+    printf("Enter the constant : ");
+    scanf("%lf", &para[2]);
+    printf("Enter the lower limit : ");
+    scanf("%lf", &para[3]);
+    printf("Enter the upper limit : ");
+    scanf("%lf", &para[4]);
+    printf("\nThe area under graph is : %lf\n", integrate(para[0], para[1], para[2], para[3], para[4]));
     return 0;
 }
